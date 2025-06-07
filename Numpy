@@ -30,3 +30,4 @@ eq5 = Eq(-2*x + 3*y - z, -9)
 solusi2 = solve((eq3, eq4, eq5), (x, y, z))
 print("\nsolusi untuk soal 2:")
 print(solusi2)
+
