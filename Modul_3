@@ -1,0 +1,33 @@
+import numpy as np
+
+A = np.array([[2, 3], [1, -1]])
+B = np.array([7, 1])
+x = np.linalg.solve(A, B)
+print("\nNilai variabel untuk Sistem Persamaan 1:")
+print("Nilai x:", x[0])
+print("Nilai y:", x[1])
+
+A2 = np.array([[1, 2, 1], [3, -1, 2], [-2, 3, -1]])
+b2 = np.array([10, 5, -9])
+x2 = np.linalg.solve(A2, b2)
+print("\nNilai variabel untuk Sistem Persamaan 2:")
+print(f"x = {x2[0]}")
+print(f"y = {x2[1]}")
+print(f"z = {x2[2]}")
+
+import sympy as sp
+
+x, y, z = symbols('x y z')
+eq1 = Eq(2*x + 3*y, 7)
+eq2 = Eq(x - y, 1)
+solusi1 = solve((eq1, eq2), (x, y))
+print("\nsolusi untuk soal 1:")
+print(solusi1)
+
+eq3 = Eq(x + 2*y + z, 10)
+eq4 = Eq(3*x - y + 2*z, 5)
+eq5 = Eq(-2*x + 3*y - z, -9)
+solusi2 = solve((eq3, eq4, eq5), (x, y, z))
+print("\nsolusi untuk soal 2:")
+print(solusi2)
+
